@@ -27,10 +27,10 @@ export const Input = forwardRef<HTMLInputElement, InputProps>(function Input(
           aria-describedby={describedBy}
           aria-errormessage={error && id ? `${id}-error` : undefined}
           className={cn(
-            'interactive-outline h-12 w-full rounded-[22px] border border-white/14 bg-[linear-gradient(180deg,rgba(50,38,46,0.84),rgba(39,29,37,0.76))] px-4 text-sm text-cream shadow-[0_14px_30px_rgba(20,12,18,0.12),inset_0_1px_0_rgba(255,248,245,0.1)] outline-none transition placeholder:text-cream/48 hover:border-white/20 hover:bg-[linear-gradient(180deg,rgba(56,42,52,0.88),rgba(43,33,41,0.78))] focus:border-blush/70 focus:bg-[linear-gradient(180deg,rgba(58,43,54,0.92),rgba(45,34,43,0.8))] focus-visible:ring-blush/16 disabled:cursor-not-allowed disabled:border-white/8 disabled:bg-[linear-gradient(180deg,rgba(39,30,36,0.72),rgba(31,24,30,0.64))] disabled:text-cream/46 disabled:placeholder:text-cream/28',
+            'interactive-outline h-12 w-full rounded-[22px] border border-white/76 bg-[linear-gradient(180deg,rgba(255,255,255,0.9),rgba(232,241,248,0.64))] px-4 text-sm text-cocoa shadow-[0_14px_28px_rgba(86,116,146,0.12),inset_0_1px_0_rgba(255,255,255,0.92)] outline-none transition-[background-color,border-color,box-shadow,color] placeholder:text-cocoa/48 hover:border-white/88 hover:bg-[linear-gradient(180deg,rgba(255,255,255,0.96),rgba(236,244,250,0.72))] focus:border-midnight/44 focus:bg-[linear-gradient(180deg,rgba(255,255,255,0.98),rgba(238,245,251,0.78))] focus-visible:ring-midnight/12 disabled:cursor-not-allowed disabled:border-white/52 disabled:bg-[linear-gradient(180deg,rgba(255,255,255,0.56),rgba(235,244,250,0.26))] disabled:text-cocoa/38 disabled:placeholder:text-cocoa/26',
             endAdornment ? 'pr-12' : '',
-            error ? 'border-rose-400/72 focus:border-rose-300 focus-visible:ring-rose-300/12' : '',
-            !error && isValid ? 'border-emerald-300/40 bg-[linear-gradient(180deg,rgba(50,61,56,0.7),rgba(39,45,42,0.64))] focus:border-emerald-300/50 focus-visible:ring-emerald-300/12' : '',
+            error ? 'border-plum/56 bg-[linear-gradient(180deg,rgba(255,255,255,0.8),rgba(230,236,244,0.3))] focus:border-plum/68 focus-visible:ring-plum/14' : '',
+            !error && isValid ? 'border-royal/44 bg-[linear-gradient(180deg,rgba(255,255,255,0.84),rgba(215,231,245,0.28))] focus:border-royal/54 focus-visible:ring-royal/14' : '',
             className,
           )}
           {...props}
@@ -38,12 +38,12 @@ export const Input = forwardRef<HTMLInputElement, InputProps>(function Input(
         {endAdornment ? <div className="absolute inset-y-0 right-3 flex items-center">{endAdornment}</div> : null}
       </div>
       {hint && !error ? (
-        <p id={id ? `${id}-hint` : undefined} className="text-sm text-cream/58">
+        <p id={id ? `${id}-hint` : undefined} className="text-sm text-cocoa/58">
           {hint}
         </p>
       ) : null}
       {error ? (
-        <p id={id ? `${id}-error` : undefined} className="text-sm text-rose-100">
+        <p id={id ? `${id}-error` : undefined} className="text-sm text-plum">
           {error}
         </p>
       ) : null}

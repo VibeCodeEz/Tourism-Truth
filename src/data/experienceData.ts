@@ -7,7 +7,7 @@ export const travelTypes: TravelTypeOption[] = [
     description: 'Move at your own tempo with reflective prompts, cinematic facts, and confident solo challenges.',
     supportCopy: 'Best when you want a self-paced route with reflective reveals and independent photo moments.',
     toneLabel: 'Quietly cinematic',
-    accent: 'from-azure/30 via-royal/20 to-transparent',
+    accent: 'from-azure/22 via-white/10 to-transparent',
     iconKey: 'compass',
   },
   {
@@ -16,7 +16,7 @@ export const travelTypes: TravelTypeOption[] = [
     description: 'Perfect for siblings or friends who want playful conversation starters while exploring.',
     supportCopy: 'Ideal for two-person days where the route should feel social, easy, and naturally conversational.',
     toneLabel: 'Light and social',
-    accent: 'from-gold/30 via-blush/15 to-transparent',
+    accent: 'from-gold/16 via-royal/10 to-transparent',
     iconKey: 'sparkles',
   },
   {
@@ -25,7 +25,7 @@ export const travelTypes: TravelTypeOption[] = [
     description: 'A social version of the experience with high-energy dares and shared moments to capture.',
     supportCopy: 'Built for a louder group rhythm with faster choices, more reactions, and crowd-friendly energy.',
     toneLabel: 'High-energy',
-    accent: 'from-azure/30 via-blush/15 to-transparent',
+    accent: 'from-azure/18 via-royal/10 to-transparent',
     iconKey: 'users',
   },
   {
@@ -34,7 +34,7 @@ export const travelTypes: TravelTypeOption[] = [
     description: 'Soft, intimate prompts designed for memorable travel stories and lighthearted chemistry.',
     supportCopy: 'Designed for softer pacing, shared perspective, and little moments that feel worth remembering.',
     toneLabel: 'Softly intimate',
-    accent: 'from-blush/30 via-gold/15 to-transparent',
+    accent: 'from-azure/14 via-gold/10 to-transparent',
     iconKey: 'heart',
   },
 ]
@@ -48,7 +48,7 @@ export const destinations: Destination[] = [
     imagePath: '/asset/destinations/intramuros.jpg',
     location: 'Manila, Philippines',
     premiumOnly: false,
-    accent: 'from-gold/35 via-royal/20 to-transparent',
+    accent: 'from-gold/16 via-royal/10 to-transparent',
     iconKey: 'castle',
     highlight: '12 curated places',
   },
@@ -60,7 +60,7 @@ export const destinations: Destination[] = [
     imagePath: '/asset/destinations/binondo.png',
     location: 'Manila, Philippines',
     premiumOnly: true,
-    accent: 'from-blush/35 via-gold/15 to-transparent',
+    accent: 'from-royal/14 via-gold/10 to-transparent',
     iconKey: 'utensils',
     highlight: 'Premium destination',
   },
@@ -72,7 +72,7 @@ export const destinations: Destination[] = [
     imagePath: '/asset/destinations/Ilocos.jpg',
     location: 'Northern Luzon, Philippines',
     premiumOnly: true,
-    accent: 'from-azure/30 via-blush/15 to-transparent',
+    accent: 'from-azure/18 via-royal/10 to-transparent',
     iconKey: 'mountain',
     highlight: 'Premium destination',
   },
@@ -84,7 +84,7 @@ export const destinations: Destination[] = [
     imagePath: '/asset/destinations/boracay.jpg',
     location: 'Aklan, Philippines',
     premiumOnly: true,
-    accent: 'from-azure/35 via-gold/15 to-transparent',
+    accent: 'from-azure/18 via-gold/10 to-transparent',
     iconKey: 'palmtree',
     highlight: 'Premium destination',
   },
@@ -107,7 +107,7 @@ export const placeExperiences: PlaceExperience[] = [
       'Find one stone detail or carving and point it out to your group like a tour host.',
     ],
     iconKey: 'fortress',
-    accent: 'from-gold/30 via-royal/15 to-transparent',
+    accent: 'from-gold/18 via-royal/10 to-transparent',
   },
   {
     id: 'san-agustin-church',
@@ -125,7 +125,7 @@ export const placeExperiences: PlaceExperience[] = [
       'Spot one decorative detail on the facade and explain why it feels timeless.',
     ],
     iconKey: 'church',
-    accent: 'from-gold/25 via-blush/15 to-transparent',
+    accent: 'from-gold/16 via-azure/10 to-transparent',
   },
   {
     id: 'san-agustin-museum',
@@ -161,7 +161,7 @@ export const placeExperiences: PlaceExperience[] = [
       'Find one arch or line that guides the eye upward and point it out dramatically.',
     ],
     iconKey: 'landmark',
-    accent: 'from-gold/25 via-royal/15 to-transparent',
+    accent: 'from-gold/16 via-royal/10 to-transparent',
   },
   {
     id: 'casa-manila',
@@ -179,7 +179,7 @@ export const placeExperiences: PlaceExperience[] = [
       'Introduce yourself like a 19th-century host welcoming guests into Casa Manila.',
     ],
     iconKey: 'building',
-    accent: 'from-blush/25 via-gold/15 to-transparent',
+    accent: 'from-royal/14 via-gold/10 to-transparent',
   },
   {
     id: 'baluarte-de-san-diego',
@@ -197,7 +197,7 @@ export const placeExperiences: PlaceExperience[] = [
       'Challenge your group to vote whether the fort feels more regal, mysterious, or cinematic.',
     ],
     iconKey: 'fortress',
-    accent: 'from-azure/25 via-blush/15 to-transparent',
+    accent: 'from-azure/18 via-royal/10 to-transparent',
   },
   {
     id: 'walls-of-intramuros',
@@ -215,7 +215,7 @@ export const placeExperiences: PlaceExperience[] = [
       'Point out one angle where the walls feel most massive and take a perspective shot.',
     ],
     iconKey: 'map',
-    accent: 'from-gold/20 via-azure/15 to-transparent',
+    accent: 'from-gold/14 via-azure/10 to-transparent',
   },
   {
     id: 'puerta-real-gardens',
@@ -233,7 +233,7 @@ export const placeExperiences: PlaceExperience[] = [
       'Find one peaceful corner and give it a custom nickname like a secret travel spot.',
     ],
     iconKey: 'sparkles',
-    accent: 'from-azure/20 via-gold/15 to-transparent',
+    accent: 'from-azure/16 via-gold/10 to-transparent',
   },
   {
     id: 'plaza-roma',
@@ -251,7 +251,7 @@ export const placeExperiences: PlaceExperience[] = [
       'Ask your travel partner which surrounding building feels most iconic and compare answers.',
     ],
     iconKey: 'landmark',
-    accent: 'from-gold/20 via-blush/15 to-transparent',
+    accent: 'from-gold/14 via-royal/10 to-transparent',
   },
   {
     id: 'ayuntamiento-de-manila',
@@ -269,7 +269,7 @@ export const placeExperiences: PlaceExperience[] = [
       'Spot one architectural feature that makes the building feel official and explain it.',
     ],
     iconKey: 'building',
-    accent: 'from-royal/20 via-gold/15 to-transparent',
+    accent: 'from-royal/16 via-gold/10 to-transparent',
   },
   {
     id: 'bahia-de-manila',
@@ -287,7 +287,7 @@ export const placeExperiences: PlaceExperience[] = [
       'Record your first reaction the moment the sky starts glowing.',
     ],
     iconKey: 'sun',
-    accent: 'from-gold/20 via-blush/15 to-transparent',
+    accent: 'from-gold/14 via-azure/10 to-transparent',
   },
   {
     id: 'kalesa-ride',
@@ -305,7 +305,7 @@ export const placeExperiences: PlaceExperience[] = [
       'Tell your group one reason exploring slowly can reveal more than rushing.',
     ],
     iconKey: 'carriage',
-    accent: 'from-gold/20 via-royal/15 to-transparent',
+    accent: 'from-gold/14 via-royal/10 to-transparent',
   },
   {
     id: 'ongpin-street',
@@ -323,7 +323,7 @@ export const placeExperiences: PlaceExperience[] = [
       'Capture one photo that feels busy without looking chaotic.',
     ],
     iconKey: 'utensils',
-    accent: 'from-blush/25 via-gold/15 to-transparent',
+    accent: 'from-royal/14 via-gold/10 to-transparent',
   },
   {
     id: 'binondo-church',
@@ -341,7 +341,7 @@ export const placeExperiences: PlaceExperience[] = [
       'Spot one detail that blends solemnity with the energy of Binondo outside.',
     ],
     iconKey: 'church',
-    accent: 'from-gold/25 via-blush/15 to-transparent',
+    accent: 'from-gold/16 via-azure/10 to-transparent',
   },
   {
     id: 'jones-bridge',
@@ -377,7 +377,7 @@ export const placeExperiences: PlaceExperience[] = [
       'Pretend you are narrating a heritage documentary intro in one line.',
     ],
     iconKey: 'church',
-    accent: 'from-gold/20 via-blush/15 to-transparent',
+    accent: 'from-gold/14 via-royal/10 to-transparent',
   },
   {
     id: 'calle-crisologo',
@@ -395,7 +395,7 @@ export const placeExperiences: PlaceExperience[] = [
       'Give the street a fictional movie title in under five words.',
     ],
     iconKey: 'camera',
-    accent: 'from-gold/20 via-royal/15 to-transparent',
+    accent: 'from-gold/14 via-royal/10 to-transparent',
   },
   {
     id: 'bangui-windmills',
@@ -413,7 +413,7 @@ export const placeExperiences: PlaceExperience[] = [
       'Record the sound of the wind for five seconds and call it your Ilocos soundtrack.',
     ],
     iconKey: 'wind',
-    accent: 'from-azure/20 via-blush/15 to-transparent',
+    accent: 'from-azure/16 via-royal/10 to-transparent',
   },
   {
     id: 'white-beach',
@@ -431,7 +431,7 @@ export const placeExperiences: PlaceExperience[] = [
       'Record a five-second barefoot walk clip with the horizon in frame.',
     ],
     iconKey: 'waves',
-    accent: 'from-azure/25 via-gold/15 to-transparent',
+    accent: 'from-azure/18 via-gold/10 to-transparent',
   },
   {
     id: 'puka-shell-beach',
@@ -449,7 +449,7 @@ export const placeExperiences: PlaceExperience[] = [
       'Challenge your companion to describe the water color without saying blue.',
     ],
     iconKey: 'shell',
-    accent: 'from-gold/25 via-azure/15 to-transparent',
+    accent: 'from-gold/16 via-azure/10 to-transparent',
   },
   {
     id: 'willys-rock',
@@ -467,7 +467,7 @@ export const placeExperiences: PlaceExperience[] = [
       'Strike a tiny-versus-huge perspective pose with the formation in the background.',
     ],
     iconKey: 'star',
-    accent: 'from-azure/25 via-gold/15 to-transparent',
+    accent: 'from-azure/18 via-gold/10 to-transparent',
   },
 ]
 

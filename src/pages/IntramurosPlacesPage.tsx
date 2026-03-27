@@ -85,58 +85,58 @@ export function IntramurosPlacesPage() {
               >
                 <Card
                   className={`card-shell hover-lift relative overflow-hidden rounded-[36px] bg-gradient-to-br ${place.accent} p-6 sm:p-7 ${
-                    isSelected ? 'border-blush/42 shadow-[0_28px_70px_rgba(215,160,178,0.18)]' : ''
+                    isSelected ? 'border-white/70 shadow-[0_28px_70px_rgba(121,177,231,0.22)]' : ''
                   }`}
                 >
-                  <div className="absolute inset-x-6 top-0 h-px bg-gradient-to-r from-white/0 via-white/24 to-white/0" />
+                  <div className="absolute inset-x-6 top-0 h-px bg-gradient-to-r from-white/0 via-white/72 to-white/0" />
                   <div className="flex items-start justify-between gap-4">
                     <div className="space-y-4">
                       <div className="flex flex-wrap items-center gap-2">
-                        <Badge className={isSelected ? 'border-blush/30 bg-blush/12 text-mist' : 'border-white/10 bg-white/6 text-cream/62'}>
+                        <Badge className={isSelected ? 'border-white/56 bg-white/34 text-cocoa' : 'border-white/40 bg-white/26 text-cocoa/82'}>
                           {isSelected ? 'Selected' : destination.name}
                         </Badge>
-                        <Badge className="border-white/10 bg-white/6 text-cream/52">Place {String(index + 1).padStart(2, '0')}</Badge>
+                        <Badge className="border-white/40 bg-white/24 text-cocoa/84">Place {String(index + 1).padStart(2, '0')}</Badge>
                       </div>
                       <div>
-                        <h2 className="font-display text-3xl text-cream sm:text-4xl">{place.name}</h2>
-                        <p className="mt-3 max-w-xl text-sm leading-7 text-cream/68">{place.shortDescription}</p>
+                        <h2 className="font-display text-3xl text-cocoa sm:text-4xl">{place.name}</h2>
+                        <p className="mt-3 max-w-xl text-sm leading-7 text-cocoa/80">{place.shortDescription}</p>
                       </div>
                     </div>
-                    <div className={`rounded-[24px] border p-3 text-blush ${
-                      isSelected ? 'border-blush/24 bg-blush/10' : 'border-white/12 bg-white/10'
+                    <div className={`rounded-[24px] border p-3 text-cocoa ${
+                      isSelected ? 'border-white/46 bg-white/22' : 'border-white/28 bg-white/16'
                     }`}>
-                      <Icon className="size-5 text-blush" />
+                      <Icon className="size-5 text-cocoa" />
                     </div>
                   </div>
 
                   <div className="mt-5 grid gap-2 sm:grid-cols-3">
-                    <div className="rounded-[22px] border border-white/10 bg-white/6 px-4 py-3">
-                      <p className="text-[11px] uppercase tracking-[0.22em] text-cream/40">Type</p>
-                      <p className="mt-2 text-sm font-semibold text-cream/76">Heritage stop</p>
+                    <div className="rounded-[22px] border border-white/24 bg-white/16 px-4 py-3">
+                      <p className="text-[11px] uppercase tracking-[0.22em] text-cocoa/66">Type</p>
+                      <p className="mt-2 text-sm font-semibold text-cocoa/84">Heritage stop</p>
                     </div>
-                    <div className="rounded-[22px] border border-white/10 bg-white/6 px-4 py-3">
-                      <p className="text-[11px] uppercase tracking-[0.22em] text-cream/40">Round access</p>
-                      <p className="mt-2 text-sm font-semibold text-cream/76">Truth + Dare</p>
+                    <div className="rounded-[22px] border border-white/24 bg-white/16 px-4 py-3">
+                      <p className="text-[11px] uppercase tracking-[0.22em] text-cocoa/66">Round access</p>
+                      <p className="mt-2 text-sm font-semibold text-cocoa/84">Truth + Dare + Audio Tour</p>
                     </div>
-                    <div className="rounded-[22px] border border-white/10 bg-white/6 px-4 py-3">
-                      <p className="text-[11px] uppercase tracking-[0.22em] text-cream/40">Included</p>
-                      <p className="mt-2 text-sm font-semibold text-cream/76">Free in route</p>
+                    <div className="rounded-[22px] border border-white/24 bg-white/16 px-4 py-3">
+                      <p className="text-[11px] uppercase tracking-[0.22em] text-cocoa/66">Included</p>
+                      <p className="mt-2 text-sm font-semibold text-cocoa/84">Free in route</p>
                     </div>
                   </div>
 
-                  <div className="mt-5 rounded-[26px] border border-white/10 bg-white/6 p-4">
-                    <div className="inline-flex items-center gap-2 text-sm font-semibold text-blush">
+                  <div className="mt-5 rounded-[26px] border border-white/24 bg-white/16 p-4">
+                    <div className="inline-flex items-center gap-2 text-sm font-semibold text-cocoa">
                       <Sparkles className="size-4" />
                       Place context
                     </div>
-                    <p id={`${place.id}-place-context`} className="mt-3 text-sm leading-7 text-cream/76">
+                    <p id={`${place.id}-place-context`} className="mt-3 text-sm leading-7 text-cocoa/82">
                       {place.detail}
                     </p>
                   </div>
 
                   <div className="mt-5 flex items-center justify-between gap-4">
-                    <div className="inline-flex items-center gap-2 text-sm text-cream/58">
-                      <MapPinned className="size-4 text-blush" />
+                    <div className="inline-flex items-center gap-2 text-sm text-cocoa/76">
+                      <MapPinned className="size-4 text-cocoa" />
                       {destination.name}
                     </div>
                     <AnimatePresence>
@@ -146,13 +146,13 @@ export function IntramurosPlacesPage() {
                           animate={reduceMotion ? undefined : { opacity: 1, scale: 1 }}
                           exit={reduceMotion ? undefined : { opacity: 0, scale: 0.9 }}
                           transition={reduceMotion ? { duration: 0 } : { duration: 0.28, ease: luxuryEase }}
-                          className="inline-flex items-center gap-2 rounded-full border border-blush/22 bg-blush/12 px-3 py-1.5 text-sm font-semibold text-mist"
+                          className="inline-flex items-center gap-2 rounded-full border border-white/44 bg-white/24 px-3 py-1.5 text-sm font-semibold text-cocoa"
                         >
                           <CheckCircle2 className="size-4" />
                           Ready
                         </motion.div>
                       ) : (
-                        <p className="text-sm font-semibold text-cream/52">Tap to choose this place</p>
+                        <p className="text-sm font-semibold text-cocoa/76">Tap to choose this place</p>
                       )}
                     </AnimatePresence>
                   </div>
@@ -165,8 +165,8 @@ export function IntramurosPlacesPage() {
         <Card className="rounded-[36px] p-5 sm:p-6">
           <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
             <div>
-              <p className="text-sm uppercase tracking-[0.18em] text-cream/45">Selected place</p>
-              <p className="mt-1 font-display text-3xl text-cream">{selectedPlace?.name ?? 'Choose one place'}</p>
+              <p className="text-sm uppercase tracking-[0.18em] text-cocoa/68">Selected place</p>
+              <p className="mt-1 font-display text-3xl text-cocoa">{selectedPlace?.name ?? 'Choose one place'}</p>
               <AnimatePresence mode="wait">
                 <motion.p
                   key={selectedPlace?.id ?? 'empty-place'}
@@ -174,11 +174,11 @@ export function IntramurosPlacesPage() {
                   animate={reduceMotion ? undefined : { opacity: 1, y: 0 }}
                   exit={reduceMotion ? undefined : { opacity: 0, y: -8 }}
                   transition={reduceMotion ? { duration: 0 } : { duration: 0.32, ease: luxuryEase }}
-                  className="mt-2 max-w-2xl text-sm leading-7 text-cream/62"
+                  className="mt-2 max-w-2xl text-sm leading-7 text-cocoa/76"
                 >
                   {selectedPlace
-                    ? `${selectedPlace.shortDescription} Continue when you want this exact place to drive the next truth or dare round.`
-                    : 'Choose the one stop that should shape the next truth or dare reveal.'}
+                    ? `${selectedPlace.shortDescription} Continue when you want this exact place to drive the next truth, dare, or audio tour round.`
+                    : 'Choose the one stop that should shape the next truth, dare, or audio tour reveal.'}
                 </motion.p>
               </AnimatePresence>
             </div>

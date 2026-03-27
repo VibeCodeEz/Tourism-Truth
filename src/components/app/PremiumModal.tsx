@@ -20,11 +20,11 @@ export function PremiumModal({ open, onClose, onUpgrade, loading = false }: Prem
       description="Open Binondo, Ilocos, and Boracay with a more elevated route map, instant profile unlocks, and a premium layer that is already structured for billing later."
     >
       <div className="space-y-4">
-        <div className="rounded-[28px] border border-gold/16 bg-[linear-gradient(180deg,rgba(229,195,154,0.08),rgba(255,248,245,0.04))] p-5">
-          <p className="text-[11px] uppercase tracking-[0.22em] text-gold/82">Exclusive destinations</p>
+        <div className="rounded-[28px] border border-white/46 bg-[linear-gradient(180deg,rgba(255,255,255,0.18),rgba(223,241,255,0.12))] p-5">
+          <p className="text-[11px] uppercase tracking-[0.22em] text-cream/78">Exclusive destinations</p>
           <div className="mt-4 grid gap-2 sm:grid-cols-3">
             {['Binondo', 'Ilocos', 'Boracay'].map((route) => (
-              <div key={route} className="rounded-[22px] border border-gold/14 bg-gold/8 px-4 py-3 text-sm font-semibold text-gold">
+              <div key={route} className="rounded-[22px] border border-white/38 bg-white/18 px-4 py-3 text-sm font-semibold text-cream">
                 {route}
               </div>
             ))}
@@ -32,23 +32,23 @@ export function PremiumModal({ open, onClose, onUpgrade, loading = false }: Prem
         </div>
         <div className="grid gap-3 md:grid-cols-3">
           <Card className="rounded-3xl p-4">
-            <Crown className="mb-3 size-5 text-gold" />
+            <Crown className="mb-3 size-5 text-cream" />
             <p className="text-sm font-semibold text-cream">3 aspirational routes</p>
-            <p className="mt-1 text-sm leading-6 text-cream/68">
+            <p className="mt-1 text-sm leading-6 text-cream/76">
               Move beyond Intramuros with destination-specific experiences that unlock instantly.
             </p>
           </Card>
           <Card className="rounded-3xl p-4">
-            <Sparkles className="mb-3 size-5 text-blush" />
+            <Sparkles className="mb-3 size-5 text-azure" />
             <p className="text-sm font-semibold text-cream">Place-aware premium flow</p>
-            <p className="mt-1 text-sm leading-6 text-cream/68">
+            <p className="mt-1 text-sm leading-6 text-cream/76">
               The same polished truth-or-dare journey extends across every premium route.
             </p>
           </Card>
           <Card className="rounded-3xl p-4">
             <Star className="mb-3 size-5 text-azure" />
             <p className="text-sm font-semibold text-cream">Instant profile unlock</p>
-            <p className="mt-1 text-sm leading-6 text-cream/68">
+            <p className="mt-1 text-sm leading-6 text-cream/76">
               Your `is_premium` flag updates immediately so the UI unlocks in place.
             </p>
           </Card>

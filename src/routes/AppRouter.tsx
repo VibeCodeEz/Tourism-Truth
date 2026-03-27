@@ -18,6 +18,7 @@ const TruthOrDarePage = lazy(() =>
   import('@/pages/TruthOrDarePage').then((module) => ({ default: module.TruthOrDarePage })),
 )
 const FunFactPage = lazy(() => import('@/pages/FunFactPage').then((module) => ({ default: module.FunFactPage })))
+const AudioTourPage = lazy(() => import('@/pages/AudioTourPage').then((module) => ({ default: module.AudioTourPage })))
 const ShuffleCardsPage = lazy(() =>
   import('@/pages/ShuffleCardsPage').then((module) => ({ default: module.ShuffleCardsPage })),
 )
@@ -54,6 +55,7 @@ export function AppRouter() {
               <Route path="/app/destinations/:destinationKey" element={<IntramurosPlacesPage />} />
               <Route path="/app/play" element={<TruthOrDarePage />} />
               <Route path="/app/play/fact" element={<FunFactPage />} />
+              <Route path="/app/play/audio-tour" element={<AudioTourPage />} />
               <Route path="/app/play/shuffle" element={<ShuffleCardsPage />} />
               <Route path="/app/play/completion" element={<CompletionPage />} />
               <Route path="/premium" element={<PremiumPage />} />

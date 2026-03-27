@@ -24,13 +24,15 @@ export function PageHero({ badge, title, description, actions, children, classNa
       transition={{ duration: 0.52, ease: luxuryEase }}
     >
       <div className="glass-panel-strong hero-wash absolute inset-0 rounded-[34px] sm:rounded-[38px]" />
-      <div className="absolute inset-x-6 top-0 h-px bg-gradient-to-r from-white/0 via-white/30 to-white/0 sm:inset-x-10" />
+      <div className="absolute inset-0 bg-[linear-gradient(135deg,rgba(255,255,255,0.08),rgba(42,70,96,0.14)_60%,rgba(255,255,255,0.02))]" />
+      <div className="absolute inset-x-6 top-0 h-px bg-gradient-to-r from-white/0 via-white/85 to-white/0 sm:inset-x-10" />
+      <div className="absolute inset-x-8 bottom-0 h-px bg-gradient-to-r from-white/0 via-white/16 to-white/0 sm:inset-x-12" />
       <div className="relative flex flex-col gap-5 sm:gap-7 lg:flex-row lg:items-end lg:justify-between">
         <div className="max-w-3xl space-y-4 sm:space-y-5">
-          {badge ? <Badge className="border-blush/30 bg-blush/12 text-mist">{badge}</Badge> : null}
+          {badge ? <Badge className="border-white/60 bg-white/40 text-cocoa">{badge}</Badge> : null}
           <div className="space-y-3 sm:space-y-4">
-            <h1 className="font-display text-[2rem] leading-[0.94] text-cream sm:text-5xl lg:text-6xl">{title}</h1>
-            <p className="max-w-2xl text-sm leading-7 text-cream/76 sm:text-base sm:leading-8">{description}</p>
+            <h1 className="font-display text-[2rem] leading-[0.94] tracking-[-0.02em] text-cocoa sm:text-5xl lg:text-6xl">{title}</h1>
+            <p className="max-w-2xl text-sm leading-7 text-cocoa/82 sm:text-base sm:leading-8">{description}</p>
           </div>
           {children}
         </div>

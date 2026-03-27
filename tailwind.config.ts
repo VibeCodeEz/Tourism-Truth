@@ -5,31 +5,31 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        midnight: '#181218',
-        ink: '#221922',
-        surface: '#322632',
-        royal: '#7A5C74',
-        azure: '#BFA3C4',
-        gold: '#E5C39A',
-        blush: '#D7A0B2',
-        mint: '#BFCDBD',
-        cream: '#FBF4EE',
-        rose: '#C58FA1',
-        plum: '#5F4458',
-        cocoa: '#3A2C32',
-        mist: '#F6E9EC',
+        midnight: '#24415D',
+        ink: '#425F7F',
+        surface: '#7995B4',
+        royal: '#90B8DD',
+        azure: '#D7EBFA',
+        gold: '#EEF7FD',
+        blush: '#B8D2E8',
+        mint: '#DCEFF0',
+        cream: '#FBFDFF',
+        rose: '#E6E8F7',
+        plum: '#6C86A2',
+        cocoa: '#23384C',
+        mist: '#F2F8FD',
       },
       fontFamily: {
         display: ['"Cormorant Garamond"', 'serif'],
         sans: ['Manrope', 'sans-serif'],
       },
       boxShadow: {
-        glow: '0 0 0 1px rgba(255,244,241,0.08), 0 26px 90px rgba(43, 24, 34, 0.34)',
-        soft: '0 22px 60px rgba(46, 28, 37, 0.22)',
+        glow: '0 0 0 1px rgba(255,255,255,0.62), 0 22px 70px rgba(91, 129, 166, 0.16)',
+        soft: '0 22px 56px rgba(97, 134, 169, 0.14)',
       },
       backgroundImage: {
         'hero-grid':
-          'radial-gradient(circle at top, rgba(215, 160, 178, 0.18), transparent 30%), radial-gradient(circle at 82% 18%, rgba(229, 195, 154, 0.18), transparent 24%), linear-gradient(135deg, rgba(255,250,247,0.08) 0%, rgba(255,255,255,0) 100%)',
+          'radial-gradient(circle at top, rgba(151, 202, 242, 0.24), transparent 30%), radial-gradient(circle at 82% 18%, rgba(223, 241, 255, 0.3), transparent 24%), linear-gradient(135deg, rgba(255,255,255,0.26) 0%, rgba(255,255,255,0) 100%)',
       },
       keyframes: {
         drift: {

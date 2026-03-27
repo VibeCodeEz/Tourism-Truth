@@ -39,7 +39,7 @@ function getPasswordStrength(password: string) {
     return {
       score,
       label: 'Weak: add length, a number, and a symbol.',
-      tone: 'text-rose-200',
+      tone: 'text-cream/72',
       bars: 1,
     }
   }
@@ -48,7 +48,7 @@ function getPasswordStrength(password: string) {
     return {
       score,
       label: 'Good: one more layer will make it stronger.',
-      tone: 'text-gold',
+      tone: 'text-azure',
       bars: 2,
     }
   }
@@ -56,7 +56,7 @@ function getPasswordStrength(password: string) {
   return {
     score,
     label: 'Strong: this is ready for a production-style account.',
-    tone: 'text-emerald-200',
+    tone: 'text-cream',
     bars: 3,
   }
 }
@@ -132,21 +132,21 @@ export function RegisterPage() {
 
         <div className="grid flex-1 gap-5 lg:grid-cols-[0.9fr,1.1fr] lg:gap-8 lg:items-center">
           <Card className="order-2 rounded-[32px] p-6 sm:p-8 lg:order-1">
-            <Badge className="border-blush/30 bg-blush/12 text-mist">Create account</Badge>
-            <h1 className="mt-4 font-display text-4xl text-cream sm:text-5xl">Build your travel identity.</h1>
-            <p className="mt-3 text-sm leading-7 text-cream/64">
+            <Badge className="border-white/56 bg-white/34 text-cocoa">Create account</Badge>
+            <h1 className="mt-4 font-display text-4xl text-cocoa sm:text-5xl">Build your travel identity.</h1>
+            <p className="mt-3 text-sm leading-7 text-cocoa/80">
               Register once, store your travel type, keep premium status on your profile, and save each gameplay
               session in Supabase.
             </p>
-            <div className="mt-6 rounded-[28px] border border-white/10 bg-white/6 p-5">
-              <p className="text-sm uppercase tracking-[0.18em] text-cream/45">What you unlock</p>
-              <p className="mt-3 text-base leading-7 text-cream/78">
+            <div className="mt-6 rounded-[28px] border border-white/36 bg-white/18 p-5">
+              <p className="text-sm uppercase tracking-[0.18em] text-cocoa/68">What you unlock</p>
+              <p className="mt-3 text-base leading-7 text-cocoa/82">
                 A cleaner way to move from inspiration to play, with your route choices and session history already attached to your account.
               </p>
             </div>
             {!isSupabaseConfigured ? (
-              <div className="mt-6 flex items-start gap-3 rounded-3xl border border-amber-400/20 bg-amber-400/10 p-4 text-sm text-amber-100">
-                <AlertCircle className="mt-0.5 size-4 shrink-0" />
+              <div className="mt-6 flex items-start gap-3 rounded-3xl border border-white/42 bg-[linear-gradient(180deg,rgba(255,255,255,0.22),rgba(223,241,255,0.12))] p-4 text-sm text-cream/88">
+                <AlertCircle className="mt-0.5 size-4 shrink-0 text-azure" />
                 Add `VITE_SUPABASE_URL` and `VITE_SUPABASE_ANON_KEY` before testing the auth flow.
               </div>
             ) : null}
@@ -154,8 +154,8 @@ export function RegisterPage() {
 
           <Card className="order-1 rounded-[32px] p-5 sm:p-7 lg:order-2 lg:p-8">
             <div className="mb-5 space-y-2">
-              <p className="text-sm uppercase tracking-[0.22em] text-cream/45">Account setup</p>
-              <h2 className="font-display text-3xl text-cream sm:text-4xl">Create your travel login.</h2>
+              <p className="text-sm uppercase tracking-[0.22em] text-cocoa/68">Account setup</p>
+              <h2 className="font-display text-3xl text-cocoa sm:text-4xl">Create your travel login.</h2>
             </div>
 
             <form className="space-y-4 sm:space-y-5" onSubmit={handleSubmit} aria-busy={submitting}>
@@ -163,12 +163,12 @@ export function RegisterPage() {
                 <div
                   role="alert"
                   aria-live="assertive"
-                  className="flex items-start gap-3 rounded-[24px] border border-rose-300/24 bg-rose-300/10 px-4 py-3 text-sm text-rose-50"
+                  className="flex items-start gap-3 rounded-[24px] border border-plum/28 bg-[linear-gradient(180deg,rgba(108,134,162,0.22),rgba(255,255,255,0.12))] px-4 py-3 text-sm text-cream"
                 >
-                  <AlertCircle className="mt-0.5 size-4 shrink-0" />
+                  <AlertCircle className="mt-0.5 size-4 shrink-0 text-azure" />
                   <div>
                     <p className="font-semibold">Account creation failed</p>
-                    <p className="mt-1 text-rose-50/90">{submitError}</p>
+                    <p className="mt-1 text-cream/80">{submitError}</p>
                   </div>
                 </div>
               ) : null}
@@ -177,18 +177,18 @@ export function RegisterPage() {
                 <div
                   role="status"
                   aria-live="polite"
-                  className="flex items-start gap-3 rounded-[24px] border border-blush/18 bg-blush/8 px-4 py-3 text-sm text-cream/82"
+                  className="flex items-start gap-3 rounded-[24px] border border-white/34 bg-white/16 px-4 py-3 text-sm text-cocoa"
                 >
                   <LoaderCircle className="mt-0.5 size-4 shrink-0 animate-spin" />
                   <div>
                     <p className="font-semibold">Creating your account</p>
-                    <p className="mt-1 text-cream/64">Saving your profile, travel setup, and starting permissions.</p>
+                    <p className="mt-1 text-cocoa/76">Saving your profile, travel setup, and starting permissions.</p>
                   </div>
                 </div>
               ) : null}
 
               <div className="space-y-2">
-                <label className="text-sm font-medium text-cream/80" htmlFor="fullName">
+                <label className="text-sm font-medium text-cocoa" htmlFor="fullName">
                   Full name
                 </label>
                 <Input
@@ -205,7 +205,7 @@ export function RegisterPage() {
                 />
               </div>
               <div className="space-y-2">
-                <label className="text-sm font-medium text-cream/80" htmlFor="email">
+                <label className="text-sm font-medium text-cocoa" htmlFor="email">
                   Email
                 </label>
                 <Input
@@ -221,7 +221,7 @@ export function RegisterPage() {
                 />
               </div>
               <div className="space-y-2">
-                <label className="text-sm font-medium text-cream/80" htmlFor="password">
+                <label className="text-sm font-medium text-cocoa" htmlFor="password">
                   Password
                 </label>
                 <Input
@@ -238,7 +238,7 @@ export function RegisterPage() {
                   endAdornment={
                     <button
                       type="button"
-                      className="interactive-outline rounded-full p-1 text-cream/48 transition hover:text-cream"
+                      className="interactive-outline rounded-full p-1 text-cocoa/48 transition hover:text-cocoa"
                       onClick={() => setShowPassword((current) => !current)}
                       aria-label={showPassword ? 'Hide password' : 'Show password'}
                     >
@@ -254,11 +254,11 @@ export function RegisterPage() {
                         className={`h-1.5 rounded-full ${
                           index < passwordStrength.bars
                             ? index === 0
-                              ? 'bg-rose-300/80'
+                              ? 'bg-plum/82'
                               : index === 1
-                                ? 'bg-gold/80'
-                                : 'bg-emerald-300/80'
-                            : 'bg-white/8'
+                                ? 'bg-azure/90'
+                                : 'bg-royal/90'
+                            : 'bg-white/18'
                         }`}
                       />
                     ))}
@@ -274,9 +274,9 @@ export function RegisterPage() {
               </Button>
             </form>
 
-            <p className="mt-5 text-sm text-cream/55">
+            <p className="mt-5 text-sm text-cocoa/76">
               Already have an account?{' '}
-              <Link to="/login" className="font-semibold text-cream">
+              <Link to="/login" className="font-semibold text-cocoa">
                 Sign in
               </Link>
             </p>

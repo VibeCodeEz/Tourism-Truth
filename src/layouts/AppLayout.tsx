@@ -29,7 +29,7 @@ export function AppLayout() {
     <div className="relative min-h-screen overflow-hidden">
       <a
         href="#app-content"
-        className="interactive-outline absolute left-4 top-4 z-50 -translate-y-16 rounded-full border border-white/12 bg-ink px-4 py-2 text-sm text-cream transition focus:translate-y-0"
+        className="interactive-outline absolute left-4 top-4 z-50 -translate-y-16 rounded-full border border-white/60 bg-white/72 px-4 py-2 text-sm text-cocoa transition focus:translate-y-0"
       >
         Skip to content
       </a>
@@ -40,7 +40,7 @@ export function AppLayout() {
             <div className="flex items-center justify-between gap-4">
               <Logo />
               <div className="flex items-center gap-2 md:hidden">
-                {profile?.isPremium ? <Badge className="border-gold/35 bg-gold/12 text-gold">Premium</Badge> : null}
+                {profile?.isPremium ? <Badge className="border-white/60 bg-white/40 text-cocoa">Premium</Badge> : null}
               </div>
             </div>
             <div className="flex flex-col gap-3 xl:flex-row xl:items-center">
@@ -51,8 +51,8 @@ export function AppLayout() {
                   className={({ isActive }) =>
                     `interactive-outline rounded-full border px-3.5 py-2.5 text-sm transition sm:px-4 sm:py-2 ${
                       isActive
-                        ? 'border-white/16 bg-white/14 text-cream shadow-soft'
-                        : 'border-transparent text-cream/70 hover:bg-white/8 hover:text-cream'
+                        ? 'border-white/65 bg-white/42 text-cocoa shadow-soft'
+                        : 'border-transparent text-cocoa/72 hover:bg-white/24 hover:text-cocoa'
                     }`
                   }
                 >
@@ -63,8 +63,8 @@ export function AppLayout() {
                   className={({ isActive }) =>
                     `interactive-outline rounded-full border px-3.5 py-2.5 text-sm transition sm:px-4 sm:py-2 ${
                       isActive
-                        ? 'border-white/16 bg-white/14 text-cream shadow-soft'
-                        : 'border-transparent text-cream/70 hover:bg-white/8 hover:text-cream'
+                        ? 'border-white/65 bg-white/42 text-cocoa shadow-soft'
+                        : 'border-transparent text-cocoa/72 hover:bg-white/24 hover:text-cocoa'
                     }`
                   }
                 >
@@ -75,8 +75,8 @@ export function AppLayout() {
                   className={({ isActive }) =>
                     `interactive-outline rounded-full border px-3.5 py-2.5 text-sm transition sm:px-4 sm:py-2 ${
                       isActive
-                        ? 'border-white/16 bg-white/14 text-cream shadow-soft'
-                        : 'border-transparent text-cream/70 hover:bg-white/8 hover:text-cream'
+                        ? 'border-white/65 bg-white/42 text-cocoa shadow-soft'
+                        : 'border-transparent text-cocoa/72 hover:bg-white/24 hover:text-cocoa'
                     }`
                   }
                 >
@@ -87,8 +87,8 @@ export function AppLayout() {
                   className={({ isActive }) =>
                     `interactive-outline rounded-full border px-3.5 py-2.5 text-sm transition sm:px-4 sm:py-2 ${
                       isActive
-                        ? 'border-white/16 bg-white/14 text-cream shadow-soft'
-                        : 'border-transparent text-cream/70 hover:bg-white/8 hover:text-cream'
+                        ? 'border-white/65 bg-white/42 text-cocoa shadow-soft'
+                        : 'border-transparent text-cocoa/72 hover:bg-white/24 hover:text-cocoa'
                     }`
                   }
                 >
@@ -101,13 +101,13 @@ export function AppLayout() {
                   {state.destinationKey ?? 'Choose a route'}
                 </Badge>
                 {profile?.isPremium ? (
-                  <Badge className="hidden border-gold/35 bg-gold/12 text-gold md:inline-flex">
+                  <Badge className="hidden border-white/60 bg-white/40 text-cocoa md:inline-flex">
                     <Crown className="mr-2 size-3.5" />
                     Premium
                   </Badge>
                 ) : null}
                 {!profile?.isPremium ? (
-                  <Badge className="hidden border-blush/30 bg-blush/12 text-mist sm:inline-flex">
+                  <Badge className="hidden border-white/56 bg-white/34 text-cocoa sm:inline-flex">
                     <Sparkles className="mr-2 size-3.5" />
                     Intramuros free now
                   </Badge>

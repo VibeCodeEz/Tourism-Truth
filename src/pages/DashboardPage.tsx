@@ -38,11 +38,11 @@ export function DashboardPage() {
 
       <div className="grid gap-4 lg:grid-cols-3">
         <Card className="rounded-[30px] p-6">
-          <p className="text-sm uppercase tracking-[0.2em] text-cream/45">Travel setup</p>
-          <h2 className="mt-3 font-display text-3xl text-cream">
+          <p className="text-sm uppercase tracking-[0.2em] text-cocoa/68">Travel setup</p>
+          <h2 className="mt-3 font-display text-3xl text-cocoa">
             {profile?.travelType ?? state.travelType ?? 'Not selected yet'}
           </h2>
-          <p className="mt-3 text-sm leading-7 text-cream/68">
+          <p className="mt-3 text-sm leading-7 text-cocoa/80">
             Pick the traveler profile that matches your day so the experience feels more personal.
           </p>
           <Link to="/app/travel-type" className={buttonStyles({ variant: 'secondary', size: 'sm', className: 'mt-5' })}>
@@ -50,21 +50,21 @@ export function DashboardPage() {
           </Link>
         </Card>
         <Card className="rounded-[30px] p-6">
-          <p className="text-sm uppercase tracking-[0.2em] text-cream/45">Current route</p>
-          <h2 className="mt-3 font-display text-3xl text-cream">
+          <p className="text-sm uppercase tracking-[0.2em] text-cocoa/68">Current route</p>
+          <h2 className="mt-3 font-display text-3xl text-cocoa">
             {state.destinationKey ? state.destinationKey.charAt(0).toUpperCase() + state.destinationKey.slice(1) : 'Choose a destination'}
           </h2>
-          <p className="mt-3 text-sm leading-7 text-cream/68">
+          <p className="mt-3 text-sm leading-7 text-cocoa/80">
             {state.destinationKey
               ? 'You can continue straight into place selection or switch routes anytime.'
               : 'Intramuros is always available. Premium opens Binondo, Ilocos, and Boracay immediately.'}
           </p>
         </Card>
         <Card className="rounded-[30px] p-6">
-          <p className="text-sm uppercase tracking-[0.2em] text-cream/45">Deck status</p>
-          <h2 className="mt-3 font-display text-3xl text-cream">15-card shuffle</h2>
-          <p className="mt-3 text-sm leading-7 text-cream/68">
-            Truth gives you a direct reveal. Dare sends you into the suspense deck after a place-specific fun fact.
+          <p className="text-sm uppercase tracking-[0.2em] text-cocoa/68">Deck status</p>
+          <h2 className="mt-3 font-display text-3xl text-cocoa">15-card shuffle</h2>
+          <p className="mt-3 text-sm leading-7 text-cocoa/80">
+            Truth gives you a direct reveal. Dare sends you into the suspense deck. Audio Tour offers a guided-stop read.
           </p>
         </Card>
       </div>
@@ -72,11 +72,11 @@ export function DashboardPage() {
       <div className="grid gap-4 lg:grid-cols-4">
         {destinations.map((destination) => (
           <Card key={destination.key} className="rounded-[28px] p-5">
-            <Badge className={destination.premiumOnly ? 'border-gold/30 bg-gold/12 text-gold' : ''}>
+            <Badge className={destination.premiumOnly ? 'border-white/56 bg-white/34 text-cocoa' : ''}>
               {destination.highlight}
             </Badge>
-            <h3 className="mt-4 font-display text-3xl text-cream">{destination.name}</h3>
-            <p className="mt-2 text-sm text-cream/68">{destination.tagline}</p>
+            <h3 className="mt-4 font-display text-3xl text-cocoa">{destination.name}</h3>
+            <p className="mt-2 text-sm text-cocoa/80">{destination.tagline}</p>
           </Card>
         ))}
       </div>
@@ -85,9 +85,9 @@ export function DashboardPage() {
         <Card className="rounded-[32px] p-6">
           <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
             <div>
-              <Badge className="border-gold/30 bg-gold/12 text-gold">Premium teaser</Badge>
-              <h2 className="mt-3 font-display text-3xl text-cream">Open the wider route map.</h2>
-              <p className="mt-2 text-sm leading-7 text-cream/68">
+              <Badge className="border-white/56 bg-white/34 text-cocoa">Premium teaser</Badge>
+              <h2 className="mt-3 font-display text-3xl text-cocoa">Open the wider route map.</h2>
+              <p className="mt-2 text-sm leading-7 text-cocoa/80">
                 Upgrade once to unlock Binondo, Ilocos, and Boracay with the same polished game flow and saved profile
                 state.
               </p>

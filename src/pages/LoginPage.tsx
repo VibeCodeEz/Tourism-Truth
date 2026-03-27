@@ -83,20 +83,20 @@ export function LoginPage() {
 
         <div className="grid flex-1 gap-5 lg:grid-cols-[0.9fr,1.1fr] lg:gap-8 lg:items-center">
           <Card className="order-2 rounded-[32px] p-6 sm:p-8 lg:order-1">
-            <Badge className="border-blush/30 bg-blush/12 text-mist">Member login</Badge>
-            <h1 className="mt-4 font-display text-4xl text-cream sm:text-5xl">Return to your next route.</h1>
-            <p className="mt-3 text-sm leading-7 text-cream/64">
+            <Badge className="border-white/56 bg-white/34 text-cocoa">Member login</Badge>
+            <h1 className="mt-4 font-display text-4xl text-cocoa sm:text-5xl">Return to your next route.</h1>
+            <p className="mt-3 text-sm leading-7 text-cocoa/80">
               Sign in to continue your travel game, restore your profile, and keep your destination progress in sync.
             </p>
-            <div className="mt-6 rounded-[28px] border border-white/10 bg-white/6 p-5">
-              <p className="text-sm uppercase tracking-[0.18em] text-cream/45">Inside your account</p>
-              <p className="mt-3 text-base leading-7 text-cream/78">
+            <div className="mt-6 rounded-[28px] border border-white/36 bg-white/18 p-5">
+              <p className="text-sm uppercase tracking-[0.18em] text-cocoa/68">Inside your account</p>
+              <p className="mt-3 text-base leading-7 text-cocoa/82">
                 Travel type, premium access, and saved rounds stay attached to your profile so the app feels seamless on every return.
               </p>
             </div>
             {!isSupabaseConfigured ? (
-              <div className="mt-6 flex items-start gap-3 rounded-3xl border border-amber-400/20 bg-amber-400/10 p-4 text-sm text-amber-100">
-                <AlertCircle className="mt-0.5 size-4 shrink-0" />
+              <div className="mt-6 flex items-start gap-3 rounded-3xl border border-white/42 bg-[linear-gradient(180deg,rgba(255,255,255,0.22),rgba(223,241,255,0.12))] p-4 text-sm text-cream/88">
+                <AlertCircle className="mt-0.5 size-4 shrink-0 text-azure" />
                 Add `VITE_SUPABASE_URL` and `VITE_SUPABASE_ANON_KEY` to enable authentication.
               </div>
             ) : null}
@@ -104,8 +104,8 @@ export function LoginPage() {
 
           <Card className="order-1 rounded-[32px] p-5 sm:p-7 lg:order-2 lg:p-8">
             <div className="mb-5 space-y-2">
-              <p className="text-sm uppercase tracking-[0.22em] text-cream/45">Secure sign in</p>
-              <h2 className="font-display text-3xl text-cream sm:text-4xl">Pick up where you left off.</h2>
+              <p className="text-sm uppercase tracking-[0.22em] text-cocoa/68">Secure sign in</p>
+              <h2 className="font-display text-3xl text-cocoa sm:text-4xl">Pick up where you left off.</h2>
             </div>
 
             <form className="space-y-4 sm:space-y-5" onSubmit={handleSubmit} aria-busy={submitting}>
@@ -113,12 +113,12 @@ export function LoginPage() {
                 <div
                   role="alert"
                   aria-live="assertive"
-                  className="flex items-start gap-3 rounded-[24px] border border-rose-300/24 bg-rose-300/10 px-4 py-3 text-sm text-rose-50"
+                  className="flex items-start gap-3 rounded-[24px] border border-plum/28 bg-[linear-gradient(180deg,rgba(108,134,162,0.22),rgba(255,255,255,0.12))] px-4 py-3 text-sm text-cream"
                 >
-                  <AlertCircle className="mt-0.5 size-4 shrink-0" />
+                  <AlertCircle className="mt-0.5 size-4 shrink-0 text-azure" />
                   <div>
                     <p className="font-semibold">Sign-in failed</p>
-                    <p className="mt-1 text-rose-50/90">{submitError}</p>
+                    <p className="mt-1 text-cream/80">{submitError}</p>
                   </div>
                 </div>
               ) : null}
@@ -127,18 +127,18 @@ export function LoginPage() {
                 <div
                   role="status"
                   aria-live="polite"
-                  className="flex items-start gap-3 rounded-[24px] border border-blush/18 bg-blush/8 px-4 py-3 text-sm text-cream/82"
+                  className="flex items-start gap-3 rounded-[24px] border border-white/34 bg-white/16 px-4 py-3 text-sm text-cocoa"
                 >
                   <LoaderCircle className="mt-0.5 size-4 shrink-0 animate-spin" />
                   <div>
                     <p className="font-semibold">Signing you in</p>
-                    <p className="mt-1 text-cream/64">Restoring your profile, route access, and saved progress.</p>
+                    <p className="mt-1 text-cocoa/76">Restoring your profile, route access, and saved progress.</p>
                   </div>
                 </div>
               ) : null}
 
               <div className="space-y-2">
-                <label className="text-sm font-medium text-cream/80" htmlFor="email">
+                <label className="text-sm font-medium text-cocoa" htmlFor="email">
                   Email
                 </label>
                 <Input
@@ -154,7 +154,7 @@ export function LoginPage() {
                 />
               </div>
               <div className="space-y-2">
-                <label className="text-sm font-medium text-cream/80" htmlFor="password">
+                <label className="text-sm font-medium text-cocoa" htmlFor="password">
                   Password
                 </label>
                 <Input
@@ -170,7 +170,7 @@ export function LoginPage() {
                   endAdornment={
                     <button
                       type="button"
-                      className="interactive-outline rounded-full p-1 text-cream/48 transition hover:text-cream"
+                      className="interactive-outline rounded-full p-1 text-cocoa/48 transition hover:text-cocoa"
                       onClick={() => setShowPassword((current) => !current)}
                       aria-label={showPassword ? 'Hide password' : 'Show password'}
                     >
@@ -185,9 +185,9 @@ export function LoginPage() {
               </Button>
             </form>
 
-            <p className="mt-5 text-sm text-cream/55">
+            <p className="mt-5 text-sm text-cocoa/76">
               New here?{' '}
-              <Link to="/register" className="font-semibold text-cream">
+              <Link to="/register" className="font-semibold text-cocoa">
                 Create an account
               </Link>
             </p>

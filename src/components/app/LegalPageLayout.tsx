@@ -38,13 +38,13 @@ export function LegalPageLayout({
           <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
             <Logo />
             <nav aria-label="Secondary" className="flex flex-wrap items-center gap-2">
-              <Link className="interactive-outline rounded-full px-4 py-2 text-sm text-cream/78 transition hover:bg-white/8 hover:text-cream" to="/">
+              <Link className="interactive-outline rounded-full px-4 py-2 text-sm text-cocoa/78 transition hover:bg-white/24 hover:text-cocoa" to="/">
                 Home
               </Link>
-              <Link className="interactive-outline rounded-full px-4 py-2 text-sm text-cream/78 transition hover:bg-white/8 hover:text-cream" to="/legal/privacy">
+              <Link className="interactive-outline rounded-full px-4 py-2 text-sm text-cocoa/78 transition hover:bg-white/24 hover:text-cocoa" to="/legal/privacy">
                 Privacy
               </Link>
-              <Link className="interactive-outline rounded-full px-4 py-2 text-sm text-cream/78 transition hover:bg-white/8 hover:text-cream" to="/legal/terms">
+              <Link className="interactive-outline rounded-full px-4 py-2 text-sm text-cocoa/78 transition hover:bg-white/24 hover:text-cocoa" to="/legal/terms">
                 Terms
               </Link>
             </nav>
@@ -57,21 +57,21 @@ export function LegalPageLayout({
               badge={badge}
               title={title}
               description={description}
-              actions={<Badge className="border-white/10 bg-white/8 text-cream/74">Effective date: {effectiveDate}</Badge>}
+              actions={<Badge className="border-white/56 bg-white/30 text-cocoa">Effective date: {effectiveDate}</Badge>}
             />
 
             <div className="grid gap-6 xl:grid-cols-[0.72fr,1.28fr]">
               <aside className="xl:sticky xl:top-28 xl:self-start">
                 <Card className="rounded-[34px] p-5 sm:p-6">
-                  <p className="text-sm uppercase tracking-[0.2em] text-cream/46">On this page</p>
+                  <p className="text-sm uppercase tracking-[0.2em] text-cream/54">On this page</p>
                   <nav aria-label="Section navigation" className="mt-4 flex flex-col gap-2">
                     {sections.map((section, index) => (
                       <a
                         key={section.id}
                         href={`#${section.id}`}
-                        className="interactive-outline rounded-[22px] border border-white/8 bg-white/4 px-4 py-3 text-sm text-cream/74 transition hover:border-white/12 hover:bg-white/8 hover:text-cream"
+                        className="interactive-outline rounded-[22px] border border-white/18 bg-white/10 px-4 py-3 text-sm text-cream/82 transition hover:border-white/26 hover:bg-white/16 hover:text-cream"
                       >
-                        <span className="mr-2 text-cream/38">{String(index + 1).padStart(2, '0')}</span>
+                        <span className="mr-2 text-cream/48">{String(index + 1).padStart(2, '0')}</span>
                         {section.title}
                       </a>
                     ))}
@@ -86,7 +86,7 @@ export function LegalPageLayout({
                       <h2 id={`${section.id}-heading`} className="font-display text-3xl text-cream sm:text-4xl">
                         {section.title}
                       </h2>
-                      <div className="mt-5 space-y-4 text-sm leading-7 text-cream/80 [&_strong]:text-cream [&_ul]:space-y-2 [&_ul]:pl-5 [&_ul]:text-cream/80 [&_ul]:marker:text-blush">
+                      <div className="mt-5 space-y-4 text-sm leading-7 text-cream/84 [&_strong]:text-cream [&_ul]:space-y-2 [&_ul]:pl-5 [&_ul]:text-cream/84 [&_ul]:marker:text-cream/70">
                         {section.content}
                       </div>
                     </Card>
@@ -102,4 +102,3 @@ export function LegalPageLayout({
     </div>
   )
 }
-

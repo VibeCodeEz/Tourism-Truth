@@ -32,35 +32,35 @@ export function PremiumPage() {
           />
           <div className="mt-8 grid gap-4 md:grid-cols-3">
             <Card className="rounded-[28px] p-5">
-              <Crown className="mb-3 size-5 text-gold" />
-              <p className="text-sm font-semibold text-cream">Destination unlocks</p>
-              <p className="mt-2 text-sm text-cream/68">Binondo, Ilocos, and Boracay open immediately.</p>
+              <Crown className="mb-3 size-5 text-cocoa" />
+              <p className="text-sm font-semibold text-cocoa">Destination unlocks</p>
+              <p className="mt-2 text-sm text-cocoa/80">Binondo, Ilocos, and Boracay open immediately.</p>
             </Card>
             <Card className="rounded-[28px] p-5">
-              <Sparkles className="mb-3 size-5 text-blush" />
-              <p className="text-sm font-semibold text-cream">Profile persistence</p>
-              <p className="mt-2 text-sm text-cream/68">Your premium status is stored in Supabase.</p>
+              <Sparkles className="mb-3 size-5 text-azure" />
+              <p className="text-sm font-semibold text-cocoa">Profile persistence</p>
+              <p className="mt-2 text-sm text-cocoa/80">Your premium status is stored in Supabase.</p>
             </Card>
             <Card className="rounded-[28px] p-5">
               <Star className="mb-3 size-5 text-azure" />
-              <p className="text-sm font-semibold text-cream">Future payment slot</p>
-              <p className="mt-2 text-sm text-cream/68">The flow is ready for Stripe integration later.</p>
+              <p className="text-sm font-semibold text-cocoa">Future payment slot</p>
+              <p className="mt-2 text-sm text-cocoa/80">The flow is ready for Stripe integration later.</p>
             </Card>
           </div>
         </div>
 
         <Card className="rounded-[34px] p-6">
           <Badge>{profile?.isPremium ? 'Premium active' : 'Upgrade now'}</Badge>
-          <h2 className="mt-4 font-display text-4xl text-cream">
+          <h2 className="mt-4 font-display text-4xl text-cocoa">
             {profile?.isPremium ? 'Your premium pass is active.' : 'Move beyond the free route.'}
           </h2>
           <div className="mt-6 space-y-4">
             {['Access all four destinations', 'Keep premium state on your profile', 'Prepare for future paid subscriptions'].map((item) => (
               <div key={item} className="flex items-start gap-3">
-                <div className="mt-0.5 rounded-full bg-gold/15 p-1 text-gold">
+                <div className="mt-0.5 rounded-full bg-white/18 p-1 text-cocoa">
                   <Check className="size-4" />
                 </div>
-                <p className="text-sm leading-7 text-cream/68">{item}</p>
+                <p className="text-sm leading-7 text-cocoa/80">{item}</p>
               </div>
             ))}
           </div>

@@ -89,7 +89,7 @@ export function Modal({ open, onClose, title, description, className, children }
     <AnimatePresence>
       {open ? (
         <motion.div
-          className="fixed inset-0 z-50 flex items-end bg-[rgba(20,12,18,0.8)] p-4 backdrop-blur-xl md:items-center md:justify-center"
+          className="fixed inset-0 z-50 flex items-end bg-[rgba(208,230,248,0.48)] p-4 backdrop-blur-xl md:items-center md:justify-center"
           initial={reduceMotion ? false : { opacity: 0 }}
           animate={reduceMotion ? undefined : { opacity: 1 }}
           exit={reduceMotion ? undefined : { opacity: 0 }}
@@ -104,7 +104,7 @@ export function Modal({ open, onClose, title, description, className, children }
             aria-describedby={description ? descriptionId : undefined}
             tabIndex={-1}
             className={cn(
-              'glass-panel-strong panel-grid w-full max-w-xl rounded-[36px] p-6 shadow-[0_28px_80px_rgba(20,12,18,0.38)] md:p-7',
+              'glass-panel-strong panel-grid w-full max-w-xl rounded-[36px] p-6 shadow-[0_28px_80px_rgba(102,148,192,0.24)] md:p-7',
               className,
             )}
             initial={reduceMotion ? false : { y: 36, opacity: 0, scale: 0.97 }}
@@ -128,7 +128,7 @@ export function Modal({ open, onClose, title, description, className, children }
                 ref={closeButtonRef}
                 type="button"
                 onClick={onClose}
-                className="interactive-outline rounded-full border border-white/12 bg-white/8 p-2 text-cream/70 transition hover:bg-white/12 hover:text-cream"
+                className="interactive-outline rounded-full border border-white/56 bg-white/32 p-2 text-cocoa/70 transition hover:bg-white/52 hover:text-cocoa"
                 aria-label="Close modal"
               >
                 <X className="size-4" />

@@ -6,7 +6,7 @@ export type TravelType =
 
 export type DestinationKey = 'intramuros' | 'binondo' | 'ilocos' | 'boracay'
 
-export type GameMode = 'truth' | 'dare'
+export type GameMode = 'truth' | 'dare' | 'audio-tour'
 
 export type IconKey =
   | 'compass'

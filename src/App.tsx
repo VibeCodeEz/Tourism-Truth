@@ -13,9 +13,9 @@ function App() {
           position="top-right"
           toastOptions={{
             classNames: {
-              toast: '!border-white/12 !bg-ink/90 !text-cream !backdrop-blur-xl',
-              description: '!text-cream/70',
-              actionButton: '!bg-gold !text-cocoa',
+              toast: '!border-white/60 !bg-white/80 !text-cocoa !backdrop-blur-xl',
+              description: '!text-cocoa/72',
+              actionButton: '!bg-royal !text-cream',
             },
           }}
         />

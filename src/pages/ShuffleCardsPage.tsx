@@ -217,12 +217,12 @@ export function ShuffleCardsPage() {
               }
               transition={{ duration: 1.15, repeat: isShuffling && !reduceMotion ? Infinity : 0, ease: 'easeInOut' }}
             >
-              <Badge className={isShuffling ? 'border-blush/30 bg-blush/12 text-mist' : 'border-gold/30 bg-gold/12 text-gold'}>
+              <Badge className={isShuffling ? 'border-white/42 bg-white/24 text-cream' : 'border-white/56 bg-white/34 text-cocoa'}>
                 {isShuffling ? `${secondsLeft}s remaining` : 'Deck ready'}
               </Badge>
             </motion.div>
-            <Badge className="border-white/10 bg-white/8 text-cream/62">{shuffleStatus}</Badge>
-            <p className="text-sm text-cream/50">Pick a card, or reshuffle and try again.</p>
+            <Badge className="border-white/22 bg-white/14 text-cream/74">{shuffleStatus}</Badge>
+            <p className="text-sm text-cream/60">Pick a card, or reshuffle and try again.</p>
           </div>
         </PageHero>
 
@@ -232,19 +232,19 @@ export function ShuffleCardsPage() {
               {liveMessage}
             </div>
             <div className="absolute inset-0 panel-grid opacity-80" />
-            <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(255,248,245,0.04),rgba(255,248,245,0.02))]" />
-            <div className="absolute inset-x-[14%] top-20 h-28 rounded-full bg-[radial-gradient(circle,rgba(215,160,178,0.18),transparent_68%)] blur-3xl" />
+            <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(255,255,255,0.12),rgba(223,241,255,0.06))]" />
+            <div className="absolute inset-x-[14%] top-20 h-28 rounded-full bg-[radial-gradient(circle,rgba(190,228,255,0.26),transparent_68%)] blur-3xl" />
             <div className="mb-4 flex items-center justify-between gap-3 sm:mb-5">
-              <p className="text-sm uppercase tracking-[0.18em] text-cream/45">
+              <p className="text-sm uppercase tracking-[0.18em] text-cream/54">
                 {revealedCardId !== null ? 'Chosen card' : isShuffling ? 'Shuffling in progress' : 'Pick one card'}
               </p>
-              <Badge className={isShuffling ? 'border-blush/30 bg-blush/12 text-mist' : 'border-gold/30 bg-gold/12 text-gold'}>
+              <Badge className={isShuffling ? 'border-white/42 bg-white/24 text-cream' : 'border-white/56 bg-white/34 text-cocoa'}>
                 {revealedCardId !== null ? deckLabels[revealedCardId] : isShuffling ? `${shuffleDurationSeconds}-second shuffle` : 'Deck ready'}
               </Badge>
             </div>
-            <div className="mb-5 h-1.5 overflow-hidden rounded-full bg-white/8">
+            <div className="mb-5 h-1.5 overflow-hidden rounded-full bg-white/18">
               <motion.div
-                className="h-full rounded-full bg-[linear-gradient(90deg,rgba(245,221,228,0.96),rgba(229,195,154,0.92))]"
+                className="h-full rounded-full bg-[linear-gradient(90deg,rgba(255,255,255,0.96),rgba(190,228,255,0.92),rgba(220,223,253,0.88))]"
                 animate={{ width: revealedCardId !== null ? '100%' : progressWidth }}
                 transition={{ duration: 0.3, ease: luxuryEase }}
               />
@@ -262,11 +262,11 @@ export function ShuffleCardsPage() {
               >
                   <div className="relative w-full max-w-[320px] sm:max-w-[560px] lg:max-w-[640px]">
                     <motion.div
-                      className="absolute inset-x-[10%] top-6 h-32 rounded-full bg-[radial-gradient(circle,rgba(229,195,154,0.3),transparent_72%)] blur-3xl"
+                      className="absolute inset-x-[10%] top-6 h-32 rounded-full bg-[radial-gradient(circle,rgba(190,228,255,0.32),transparent_72%)] blur-3xl"
                       animate={reduceMotion ? undefined : { opacity: [0.5, 0.9, 0.5], scale: [1, 1.06, 1] }}
                       transition={reduceMotion ? { duration: 0 } : { duration: 2.2, repeat: Infinity, ease: 'easeInOut' }}
                     />
-                    <div className="relative overflow-hidden rounded-[30px] border border-gold/35 bg-[linear-gradient(180deg,rgba(229,195,154,0.18),rgba(255,248,245,0.06))] p-2.5 shadow-[0_24px_58px_rgba(46,28,37,0.28)] sm:rounded-[42px] sm:p-4 sm:shadow-[0_34px_84px_rgba(46,28,37,0.34)]">
+                    <div className="relative overflow-hidden rounded-[30px] border border-white/38 bg-[linear-gradient(180deg,rgba(255,255,255,0.26),rgba(190,228,255,0.08))] p-2.5 shadow-[0_24px_58px_rgba(89,136,180,0.28)] sm:rounded-[42px] sm:p-4 sm:shadow-[0_34px_84px_rgba(89,136,180,0.34)]">
                       <div className="overflow-hidden rounded-[22px] sm:rounded-[30px]">
                         <img
                           src={deckFaceImages[revealedCardId]}
@@ -276,11 +276,11 @@ export function ShuffleCardsPage() {
                         />
                       </div>
                     </div>
-                    <div className="mt-4 rounded-[24px] border border-white/10 bg-white/6 px-4 py-3 text-center sm:mt-5 sm:rounded-[28px] sm:px-5 sm:py-4">
-                      <p className="text-[11px] uppercase tracking-[0.22em] text-cream/42">{deckLabels[revealedCardId]}</p>
-                      <p className="mt-2 text-sm leading-7 text-cream/74">{revealedDare}</p>
+                    <div className="mt-4 rounded-[24px] border border-white/18 bg-white/12 px-4 py-3 text-center sm:mt-5 sm:rounded-[28px] sm:px-5 sm:py-4">
+                      <p className="text-[11px] uppercase tracking-[0.22em] text-cream/52">{deckLabels[revealedCardId]}</p>
+                      <p className="mt-2 text-sm leading-7 text-cream/82">{revealedDare}</p>
                     </div>
-                    <p className="mt-5 text-center text-sm uppercase tracking-[0.22em] text-cream/45">
+                    <p className="mt-5 text-center text-sm uppercase tracking-[0.22em] text-cream/54">
                       Featured reveal
                     </p>
                   </div>
@@ -383,7 +383,7 @@ export function ShuffleCardsPage() {
                               : `${label}. Pick to draw a random dare from the ready deck.`
                         }
                         disabled={isShuffling || revealedCardId !== null}
-                        className="interactive-outline group relative aspect-[0.72] min-h-[116px] overflow-hidden rounded-[20px] border border-white/10 bg-[linear-gradient(180deg,rgba(255,248,245,0.12),rgba(255,248,245,0.05))] text-left shadow-[0_18px_42px_rgba(46,28,37,0.18),inset_0_1px_0_rgba(255,248,245,0.12)] sm:min-h-[172px] sm:rounded-[26px]"
+                        className="interactive-outline group relative aspect-[0.72] min-h-[116px] overflow-hidden rounded-[20px] border border-white/22 bg-[linear-gradient(180deg,rgba(255,255,255,0.22),rgba(223,241,255,0.08))] text-left shadow-[0_18px_42px_rgba(89,136,180,0.18),inset_0_1px_0_rgba(255,255,255,0.46)] sm:min-h-[172px] sm:rounded-[26px]"
                         style={{ perspective: 1200 }}
                         animate={animation}
                         transition={transition}
@@ -393,14 +393,14 @@ export function ShuffleCardsPage() {
                                 y: -6,
                                 scale: 1.03,
                                 boxShadow:
-                                  '0 24px 62px rgba(229, 195, 154, 0.16), inset 0 1px 0 rgba(255, 248, 245, 0.18)',
+                                  '0 24px 62px rgba(121, 177, 231, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.24)',
                               }
                             : undefined
                         }
                         onClick={() => handleCardPick()}
                       >
                         {!isShuffling ? (
-                          <div className="pointer-events-none absolute inset-x-[20%] top-3 h-10 rounded-full bg-[radial-gradient(circle,rgba(229,195,154,0.18),transparent_70%)] opacity-0 blur-2xl transition duration-300 group-hover:opacity-100" />
+                          <div className="pointer-events-none absolute inset-x-[20%] top-3 h-10 rounded-full bg-[radial-gradient(circle,rgba(190,228,255,0.22),transparent_70%)] opacity-0 blur-2xl transition duration-300 group-hover:opacity-100" />
                         ) : null}
                         <motion.div
                           className="absolute inset-0"
@@ -438,7 +438,7 @@ export function ShuffleCardsPage() {
                               className="h-full w-full object-cover"
                               draggable={false}
                             />
-                            <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(229,195,154,0.1),transparent_48%),linear-gradient(180deg,rgba(255,255,255,0.02),rgba(18,12,18,0.12))]" />
+                            <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(190,228,255,0.18),transparent_48%),linear-gradient(180deg,rgba(255,255,255,0.08),rgba(37,66,99,0.1))]" />
                           </div>
                         </motion.div>
                       </motion.button>
@@ -454,21 +454,21 @@ export function ShuffleCardsPage() {
             <h2 className="mt-4 font-display text-3xl text-cream sm:text-4xl">
               {revealedDare ? 'Card selected.' : 'Waiting for your pick.'}
             </h2>
-            <p aria-live="polite" className="mt-3 text-sm leading-7 text-cream/68">
+            <p aria-live="polite" className="mt-3 text-sm leading-7 text-cream/76">
               {revealedDare
                 ? 'The chosen card is now featured on the left. Complete the round when you are ready.'
                 : 'The revealed card will surface one playful, safe, location-aware mission for this round.'}
             </p>
-            <div className="mt-5 rounded-[26px] border border-white/12 bg-white/6 p-4 sm:mt-6 sm:rounded-[30px] sm:p-5">
-              <div className="inline-flex items-center gap-2 text-sm font-semibold text-blush">
+            <div className="mt-5 rounded-[26px] border border-white/18 bg-white/12 p-4 sm:mt-6 sm:rounded-[30px] sm:p-5">
+              <div className="inline-flex items-center gap-2 text-sm font-semibold text-cream">
                 <Sparkles className="size-4" />
                 Place mood
               </div>
-              <p className="mt-3 text-sm leading-7 text-cream/68">{activePlace.shortDescription}</p>
+              <p className="mt-3 text-sm leading-7 text-cream/76">{activePlace.shortDescription}</p>
             </div>
-            <div className="mt-3 rounded-[26px] border border-white/12 bg-white/6 p-4 sm:mt-4 sm:rounded-[30px] sm:p-5">
-              <p className="text-[11px] uppercase tracking-[0.24em] text-cream/45">Shuffle sequence</p>
-              <p className="mt-3 text-sm leading-7 text-cream/68">
+            <div className="mt-3 rounded-[26px] border border-white/18 bg-white/12 p-4 sm:mt-4 sm:rounded-[30px] sm:p-5">
+              <p className="text-[11px] uppercase tracking-[0.24em] text-cream/54">Shuffle sequence</p>
+              <p className="mt-3 text-sm leading-7 text-cream/76">
                 The deck now mixes with rising intensity, compresses, spreads into a new order, and flips to the back before the draw.
               </p>
             </div>
