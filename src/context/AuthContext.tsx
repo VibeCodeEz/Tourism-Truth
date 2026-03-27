@@ -3,7 +3,7 @@ import type { Session, User } from '@supabase/supabase-js'
 
 import { assertSupabaseConfigured, isSupabaseConfigured, supabase } from '@/lib/supabase'
 import { formatDisplayName } from '@/lib/utils'
-import type { AppProfile, TravelType } from '@/types/models'
+import type { AppProfile, GameMode, GameSessionRecord, TravelType } from '@/types/models'
 import type { Database } from '@/types/supabase'
 
 interface SignInPayload {
@@ -30,10 +30,11 @@ interface AuthContextValue {
   refreshProfile: () => Promise<void>
   updateTravelType: (travelType: TravelType) => Promise<void>
   upgradeToPremium: () => Promise<void>
+  getGameSessions: (limit?: number) => Promise<GameSessionRecord[]>
   recordGameSession: (payload: {
     destination: string
     placeName: string
-    mode: string
+    mode: GameMode
     revealedCard: string | null
   }) => Promise<void>
 }
@@ -64,6 +65,17 @@ function buildLocalProfile(user: User): AppProfile {
     travelType: null,
     isPremium: false,
     createdAt: null,
+  }
+}
+
+function mapGameSession(row: Database['public']['Tables']['game_sessions']['Row']): GameSessionRecord {
+  return {
+    id: row.id,
+    destination: row.destination,
+    placeName: row.place_name,
+    mode: row.mode,
+    revealedCard: row.revealed_card,
+    createdAt: row.created_at,
   }
 }
 
@@ -306,12 +318,31 @@ export function AuthProvider({ children }: PropsWithChildren) {
     }
   }
 
-  async function recordGameSession(payload: {
+  const getGameSessions = useCallback(async (limit = 24) => {
+    if (!user || !isSupabaseConfigured) {
+      return []
+    }
+
+    const { data, error } = await supabase
+      .from('game_sessions')
+      .select('*')
+      .eq('user_id', user.id)
+      .order('created_at', { ascending: false })
+      .limit(limit)
+
+    if (error) {
+      throw error
+    }
+
+    return (data ?? []).map((row) => mapGameSession(row as Database['public']['Tables']['game_sessions']['Row']))
+  }, [user])
+
+  const recordGameSession = useCallback(async (payload: {
     destination: string
     placeName: string
-    mode: string
+    mode: GameMode
     revealedCard: string | null
-  }) {
+  }) => {
     if (!user || !isSupabaseConfigured) {
       return
     }
@@ -327,7 +358,7 @@ export function AuthProvider({ children }: PropsWithChildren) {
     if (error) {
       throw error
     }
-  }
+  }, [user])
 
   return (
     <AuthContext.Provider
@@ -342,6 +373,7 @@ export function AuthProvider({ children }: PropsWithChildren) {
         refreshProfile,
         updateTravelType,
         upgradeToPremium,
+        getGameSessions,
         recordGameSession,
       }}
     >

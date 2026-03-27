@@ -11,6 +11,7 @@ const RegisterPage = lazy(() => import('@/pages/RegisterPage').then((module) => 
 const DashboardPage = lazy(() => import('@/pages/DashboardPage').then((module) => ({ default: module.DashboardPage })))
 const TravelTypePage = lazy(() => import('@/pages/TravelTypePage').then((module) => ({ default: module.TravelTypePage })))
 const DestinationPage = lazy(() => import('@/pages/DestinationPage').then((module) => ({ default: module.DestinationPage })))
+const HistoryPage = lazy(() => import('@/pages/HistoryPage').then((module) => ({ default: module.HistoryPage })))
 const IntramurosPlacesPage = lazy(() =>
   import('@/pages/IntramurosPlacesPage').then((module) => ({ default: module.IntramurosPlacesPage })),
 )
@@ -52,6 +53,7 @@ export function AppRouter() {
               <Route path="/app" element={<DashboardPage />} />
               <Route path="/app/travel-type" element={<TravelTypePage />} />
               <Route path="/app/destinations" element={<DestinationPage />} />
+              <Route path="/app/history" element={<HistoryPage />} />
               <Route path="/app/destinations/:destinationKey" element={<IntramurosPlacesPage />} />
               <Route path="/app/play" element={<TruthOrDarePage />} />
               <Route path="/app/play/fact" element={<FunFactPage />} />

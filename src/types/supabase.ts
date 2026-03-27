@@ -31,7 +31,7 @@ export interface Database {
           user_id: string
           destination: string
           place_name: string
-          mode: string
+          mode: 'truth' | 'dare' | 'audio-tour'
           revealed_card: string | null
           created_at: string
         }
@@ -40,7 +40,7 @@ export interface Database {
           user_id: string
           destination: string
           place_name: string
-          mode: string
+          mode: 'truth' | 'dare' | 'audio-tour'
           revealed_card?: string | null
           created_at?: string
         }
@@ -49,7 +49,7 @@ export interface Database {
           user_id?: string
           destination?: string
           place_name?: string
-          mode?: string
+          mode?: 'truth' | 'dare' | 'audio-tour'
           revealed_card?: string | null
           created_at?: string
         }

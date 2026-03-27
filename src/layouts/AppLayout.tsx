@@ -83,6 +83,18 @@ export function AppLayout() {
                   Destinations
                 </NavLink>
                 <NavLink
+                  to="/app/history"
+                  className={({ isActive }) =>
+                    `interactive-outline rounded-full border px-3.5 py-2.5 text-sm transition sm:px-4 sm:py-2 ${
+                      isActive
+                        ? 'border-white/65 bg-white/42 text-cocoa shadow-soft'
+                        : 'border-transparent text-cocoa/72 hover:bg-white/24 hover:text-cocoa'
+                    }`
+                  }
+                >
+                  History
+                </NavLink>
+                <NavLink
                   to="/premium"
                   className={({ isActive }) =>
                     `interactive-outline rounded-full border px-3.5 py-2.5 text-sm transition sm:px-4 sm:py-2 ${

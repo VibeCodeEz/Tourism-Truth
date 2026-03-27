@@ -18,6 +18,16 @@ create table if not exists public.game_sessions (
   created_at timestamptz not null default timezone('utc', now())
 );
 
+alter table public.game_sessions
+drop constraint if exists game_sessions_mode_check;
+
+alter table public.game_sessions
+add constraint game_sessions_mode_check
+check (mode in ('truth', 'dare', 'audio-tour'));
+
+create index if not exists game_sessions_user_created_at_idx
+on public.game_sessions (user_id, created_at desc);
+
 alter table public.profiles enable row level security;
 alter table public.game_sessions enable row level security;
 

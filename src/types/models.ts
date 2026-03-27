@@ -76,6 +76,15 @@ export interface AppProfile {
   createdAt: string | null
 }
 
+export interface GameSessionRecord {
+  id: string
+  destination: string
+  placeName: string
+  mode: GameMode
+  revealedCard: string | null
+  createdAt: string
+}
+
 export interface GameFlowState {
   travelType: TravelType | null
   destinationKey: DestinationKey | null
