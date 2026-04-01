@@ -104,11 +104,15 @@ export function RegisterPage() {
 
     try {
       const result = await signUp(form)
-      toast.success(
-        result.needsEmailVerification
-          ? 'Account created. Check your inbox to verify your email.'
-          : 'Account created. Welcome to Tourism Truth.',
-      )
+      if (result.profileSyncError) {
+        toast.error(`Account created, but profile sync failed: ${result.profileSyncError}`)
+      } else {
+        toast.success(
+          result.needsEmailVerification
+            ? 'Account created. Check your inbox to verify your email.'
+            : 'Account created. Welcome to Tourism Truth.',
+        )
+      }
       navigate(result.needsEmailVerification ? '/login' : '/app', { replace: true })
     } catch (error) {
       const message = error instanceof Error ? error.message : 'Unable to create account'

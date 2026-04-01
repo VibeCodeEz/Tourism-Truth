@@ -29,11 +29,22 @@ Users can:
 Create a `.env` file in the project root:
 
 ```env
-VITE_SUPABASE_URL=your_supabase_project_url
+VITE_SUPABASE_URL=https://your-project-ref.supabase.co
 VITE_SUPABASE_ANON_KEY=your_supabase_anon_key
 ```
 
 Use `.env.example` as the starting point.
+
+If you enable email confirmation in Supabase Auth, configure custom SMTP in the Supabase Dashboard. For Resend, use:
+
+```text
+Host: smtp.resend.com
+Port: 587
+Username: resend
+Password: your Resend SMTP password or API key
+Sender email: noreply@yourdomain.com
+Sender name: Tourism Truth
+```
 
 ## Setup
 

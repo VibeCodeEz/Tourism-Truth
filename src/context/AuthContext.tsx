@@ -17,6 +17,7 @@ interface SignUpPayload extends SignInPayload {
 
 interface SignUpResult {
   needsEmailVerification: boolean
+  profileSyncError?: string | null
 }
 
 interface AuthContextValue {
@@ -77,6 +78,10 @@ function mapGameSession(row: Database['public']['Tables']['game_sessions']['Row'
     revealedCard: row.revealed_card,
     createdAt: row.created_at,
   }
+}
+
+function getErrorMessage(error: unknown, fallback: string) {
+  return error instanceof Error ? error.message : fallback
 }
 
 export const AuthContext = createContext<AuthContextValue | undefined>(undefined)
@@ -236,12 +241,27 @@ export function AuthProvider({ children }: PropsWithChildren) {
       throw error
     }
 
+    let profileSyncError: string | null = null
+
+    if (data.user) {
+      setUser(data.user)
+      setProfile(buildLocalProfile(data.user))
+    }
+
     if (data.session?.user) {
-      await ensureProfile(data.session.user, payload.fullName)
+      setSession(data.session)
+
+      try {
+        await ensureProfile(data.session.user, payload.fullName)
+      } catch (error) {
+        profileSyncError = getErrorMessage(error, 'Unable to sync profile data')
+        setProfile(buildLocalProfile(data.session.user))
+      }
     }
 
     return {
       needsEmailVerification: !data.session,
+      profileSyncError,
     }
   }
 
